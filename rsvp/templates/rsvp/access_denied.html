@@ -1,0 +1,14 @@
+{% extends 'home/nav.html' %}
+{% load static %}
+{% block content %}
+<div class="container">
+	<div style="padding: 50px;"></div>
+	<h1>Invitation Code Needed!</h1>
+	<hr>
+	<div class="alert alert-info"><strong>{{ request.user.first_name }}</strong>, in order to submit your RSVP, you must enter your invitation code found on your mailed invitation!</div>
+	<br>
+
+	<a class="btn btn-outline-dark btn-lg" href="{% url 'guest:profile-update'%}">Enter Code Here</a>
+
+</div>
+{% endblock %}

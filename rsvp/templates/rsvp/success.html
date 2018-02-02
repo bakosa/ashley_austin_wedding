@@ -1,0 +1,12 @@
+{% extends 'home/nav.html' %}
+{% load static %}
+{% block content %}
+<div class="container">
+	<div style="padding-top: 50px;"></div>
+	<div  class="alert alert-success"><strong>Thank You!</strong> {{ request.user.first_name }}, your RSVP has been submitted.</div>
+	<br>
+	<div class="text-center">
+		<a class="btn btn-outline-primary" href="{% url 'home'%}">Home</a>
+	</div>
+</div>
+{% endblock %}
