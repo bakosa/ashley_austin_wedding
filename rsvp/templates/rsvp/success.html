@@ -1,12 +1,40 @@
 {% extends 'home/nav.html' %}
 {% load static %}
 {% block content %}
-<div class="container">
-	<div style="padding-top: 50px;"></div>
-	<div  class="alert alert-success"><strong>Thank You!</strong> {{ request.user.first_name }}, your RSVP has been submitted.</div>
-	<br>
-	<div class="text-center">
-		<a class="btn btn-outline-primary" href="{% url 'home'%}">Home</a>
+<style type="text/css">
+	.ocean{
+	    /* The image used */
+	    background-image: url({% static "home/img/IMG_0613.jpg" %});
+
+	    /* Full height */
+	    min-height: 100vh; 
+
+	    /* Center and scale the image nicely */
+	    background-position: center;
+	    background-repeat: no-repeat;
+	    background-size: cover;
+	}
+</style>
+
+<div class="row">
+	<div class="col-md-8 col-lg-6 col-sm-12">
+		<img class="img img-fluid" src="{% static "home/img/IMG_0613.jpg" %}">
+	</div>
+	<div style="background-color: #3c6382; color: white" class="col-md-4 col-lg-6 ">
+		<div style="padding-top: 20px" class="container text-center">
+			<h1 class="display-4">Success!</h1>
+			<p class="lead">{{ request.user.first_name }}, thank you. You have succefully submitted your RSVP. 
+				{% if request.user.response %}
+					{% if request.user.response.first.attending == 'Y' %}
+					We can't wait to celabrate with you!
+					{% else %}
+					We are sorry to hear you can't attend. If you change your mind, please let us know!
+					{% endif %}
+				{% endif %}
+			</p>
+		</div>
 	</div>
 </div>
+
+
 {% endblock %}
