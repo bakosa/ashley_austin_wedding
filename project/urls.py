@@ -1,7 +1,7 @@
 from django.conf import settings
 from django.conf.urls import include, url
 from django.contrib import admin
-from home.views import home_view
+from home.views import home_view, venue_view
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import views as auth_views
 from welcome.views import index, health
@@ -15,6 +15,8 @@ urlpatterns = [
     url(r'^health$', health),
     url(r'^admin/', include(admin.site.urls)),
     url(r'^home/$', home_view, name='home'),
+    url(r'^venue/$', login_required(venue_view), name='venue'),
+
     url(r'^login/$', auth_views.login, name='login'),
     url(r'^logout/$', auth_views.logout, name='logout'),
     url(r'^oauth/', include('social_django.urls', namespace='social')), 

@@ -1,0 +1,139 @@
+{% extends 'home/nav.html' %}
+{% load static %}
+{% block content %}
+<style>
+	body, html {
+	    height: 100%;
+	    margin: 0;
+
+	}
+
+	.barn{
+	    /* The image used */
+	    background-image: url({% static "home/img/barn.jpg" %});
+
+	    /* Full height */
+	    height: 60vh; 
+
+	    /* Center and scale the image nicely */
+	    background-position: center;
+	    background-repeat: no-repeat;
+	    background-size: cover;
+	}
+	.arial{
+	    /* The image used */
+	    background-image: url({% static "home/img/arial.jpg" %});
+
+	    /* Full height */
+	    height: 90vh; 
+
+	    /* Center and scale the image nicely */
+	    background-position: center;
+	    background-repeat: no-repeat;
+	    background-size: cover;
+	}
+	.title {
+
+	   background: rgba(255,255,255,0.5) /*linear-gradient(to right, rgba(255,255,255,0), rgba(255,255,255,1));*/ /* Standard syntax (must be last) */
+	}
+	h2, .menu-selector #navbuttontop {
+	    font-family: "Raleway",Arial,sans-serif;
+	    font-style: normal;
+	    font-size: 2.5rem;
+	    line-height: 1.3em;
+	    letter-spacing: 1px;
+	    font-family: "abril-text";
+	    font-size: 2.5rem;
+	    line-height: 1.5em;
+	    text-transform: none;
+	    letter-spacing: 0px;
+	    font-weight: 400;
+	    
+	}
+	h1{
+		font-weight: 200;
+		font-size: 3.5rem;
+
+
+	}
+	.heading{
+		height: 40vh;
+
+	}
+	.card {
+        margin: 0 auto; /* Added */
+        float: none; /* Added */
+}
+
+
+
+</style>
+
+<div class="barn"></div>
+<section class="heading" >
+	<div style="padding-top: 20px;" class="text-center container">
+		<h1 >The Venue</h1>
+		<p class="lead text-muted">Our wedding will be held at the Coolidge Family Farm in New Gloucester Maine. </p>
+		<a class="btn btn-outline-dark" href="https://www.coolidgefamilyfarm.com/venue">Coollidge Family Farm Website</a>
+	</div>
+</section>
+<div class="arial"></div>
+<br>
+<section style="background-color: rgba(223, 230, 233,0.8)" >
+	<div  class="container-fluid">
+		<div style="padding:20px" class="card-group">
+			
+				
+				<div class="card border-dark " style="width: 30rem;" >
+					<a href="https://www.coolidgefamilyfarm.com/nearby-ammenities">
+					<div style="color: black" class="card-header">Lodging</div>
+	  				<div class="card-body text-dark ">
+	  					<div class="text-center">
+	    					<img src="data:image/png;base64,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">
+							<p class="card-text">Nearby Hotels</p>
+	    				</div>
+	  				</div>
+	  				</a>
+	  			</div>
+	  			
+				
+			
+				<div  class="card border-dark" style="width: 30rem;">
+					<div class="card-header">Address</div>
+					<div class="card-body text-dark">
+						<h5 class="card-title">Coolidge Family Farm</h5>
+						<address class="card-text">
+							1084 Lewiston Road
+							New Gloucester, ME 04260
+							misty.coolidge@gmail.com
+						</address>
+					</div>
+				</div>
+			
+			
+				
+				<div class="card border-dark " style="width: 30rem;">
+					<a href="https://www.coolidgefamilyfarm.com/contact">
+					<div style="color: black" class="card-header">Farm Owners</div>
+	  				<div  class="card-body text-dark">
+	  					<div class="text-center">
+	    					<img src="data:image/png;base64,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">
+							<p class="card-text">Contact the Owners</p>
+	    				</div>
+	  				</div>
+	  				</a>
+	  			</div>
+	  			
+			
+		</div>
+		<div style="padding-bottom: 20px;" class="row">
+			<iframe style="height: 55vh" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2870.2458091610642!2d-70.29405198450719!3d43.99564417911112!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cb26644bc0fff77%3A0xd7b87c9fcb0f6e55!2s1084+Lewiston+Rd%2C+New+Gloucester%2C+ME+04260!5e0!3m2!1sen!2sus!4v1517676147111" width="100%" height="100%"  frameborder="0" style="border:0" allowfullscreen></iframe>
+		</div>	
+
+	</div>
+
+</section>
+
+
+
+{% endblock %}
