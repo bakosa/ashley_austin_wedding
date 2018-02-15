@@ -24,6 +24,7 @@ urlpatterns = [
     url(r'aawedding/guest/', include('guest.urls')),
     url(r'aawedding/rsvp/', include('rsvp.urls')),
     #url(r'/', include('snowmaker.urls')),
+    url(r'^', lambda r: HttpResponseRedirect('/aawedding/home/')),
 
 ]
 
