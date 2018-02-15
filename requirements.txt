@@ -9,3 +9,4 @@ django-crispy-forms
 django-stdimage
 boto3
 django-storages
+gunicorn

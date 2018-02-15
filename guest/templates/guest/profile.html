@@ -1,9 +1,7 @@
 {% extends 'home/nav.html' %}
 {% block content %}
 <style type="text/css">
-	body{
-		background-color: #58B19F;
-	}
+
 </style>
 <div class="container">
 	<div style="padding: 50px;"></div>
@@ -19,8 +17,11 @@
 
 				<h1 class="display-4">{{ user.first_name  }} {{ user.last_name }}</h1>
 				<hr>
-				{% if not request.user.response %}
-					<a class="btn btn-dark btn-block" href="{% url 'rsvp:rsvp' %}">{{ request.user.first_name }} Please RSVP</a>
+				<p class="lead">Member for {{ request.user.date_joined|timesince }}</p>
+				{% if not  request.user.response.first %}
+					<a class="btn btn-outline-dark btn-block" href="{% url 'rsvp:rsvp' %}">{{ request.user.first_name }} Please RSVP</a>
+				{% else %}
+					<p class="lead">Thank you for your RSVP on {{ request.user.response.first.response_date }}
 				{% endif %}
 			</div>
 		</div>

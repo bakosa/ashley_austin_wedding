@@ -7,3 +7,6 @@ def home_view(request):
 def venue_view(request):
 	return render(request, 'home/venue.html', {})
 
+def about_view(request):
+	return render(request, 'home/about_us.html', {})
+
