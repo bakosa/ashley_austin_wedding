@@ -12,7 +12,7 @@ urlpatterns = [
     # url(r'^$', 'project.views.home', name='home'),
     # url(r'^blog/', include('blog.urls')),
     url(r'^$', lambda r: HttpResponseRedirect('/aawedding/home/')),
-    url(r'^aawedding/health$', health),
+    url(r'^health$', health),
     url(r'^aawedding/admin/', include(admin.site.urls)),
     url(r'^aawedding/home/$', home_view, name='home'),
     url(r'^aawedding/venue/$', login_required(venue_view), name='venue'),
