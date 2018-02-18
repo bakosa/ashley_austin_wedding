@@ -5,6 +5,7 @@
 	body, html {
 	    height: 100%;
 	    margin: 0;
+	    background-color: #dfe6e9
 
 	}
 
@@ -14,6 +15,30 @@
 
 	    /* Full height */
 	    height: 70vh; 
+
+	    /* Center and scale the image nicely */
+	    background-position: center;
+	    background-repeat: no-repeat;
+	    background-size: cover;
+	}
+	.boston{
+	    /* The image used */
+	    background-image: url({% static "home/img/boston.jpg" %});
+
+	    /* Full height */
+	    height: 70vh; 
+
+	    /* Center and scale the image nicely */
+	    background-position: center;
+	    background-repeat: no-repeat;
+	    background-size: cover;
+	}
+	.treeline{
+	    /* The image used */
+	    background-image: url({% static "home/img/treeline.jpg" %});
+
+	    /* Full height */
+	    height: 65vh; 
 
 	    /* Center and scale the image nicely */
 	    background-position: center;
@@ -56,10 +81,7 @@
 
 
 	}
-	.heading{
-		height: 40vh;
 
-	}
 	.card {
         margin: 0 auto; /* Added */
         float: none; /* Added */
@@ -69,14 +91,57 @@
 
 </style>
 
-<div class="graduation"></div>
-<section class="heading" >
-	<div style="padding-top: 20px;" class="text-center container">
+<div class="treeline"></div>
+<section   >
+	<div style="padding: 20px;" class=" container">
 		<h1 ></h1>
-		<p class="lead text-muted">Our wedding will be held at the Coolidge Family Farm in New Gloucester Maine. </p>
-		<a class="btn btn-outline-dark" href="https://www.coolidgefamilyfarm.com/venue">Coollidge Family Farm Website</a>
+		<p class="lead text-muted">We met 8 years ago back in the summer of 2010. There has always been something between us. It all started when I (Austin) would drive to go see Ashley in the middle of the night. We were only about 17 at the time and we would just lay under the stars and talk for hours. It’s so funny how it is all so clear now… and easy to say we should have known. That’s the best part about life… learning and loving along the way.</p>
+
 	</div>
 </section>
+<section>
+	<div  class="row">
+		<div style="background-color: #3c6382; color: white" class="col-sm-8">
+			<div style="padding-top: 20px; padding-bottom: 50px" class="container text-center">
+				<h1>Throwback!</h1>
+				<p class="lead">
+					We went to Ashley’s sister’s wedding together back in 2011! 
+				</p>
+			</div>
+		</div>
+		<div class="col-sm-4 text-center">
+			<img class="img img-fluid" src="{% static "home/img/old.jpg" %}">
+		</div>
+		
+	</div>
+
+</section>
+<br>
+<section  >
+	<div class="boston"></div>
+	<div style="padding: 20px;" class=" container">
+		<h1 ></h1>
+		<p class="lead text-muted">
+			We recently moved to Boston’s Seaport District to be closer to Austin’s work. What an awesome experience. It was just the two of us in a high class studio apartment in Boston’s most up and coming location. We had epic views with an amazing roof deck. We set our goals high & managed to get numerous raises and promotions in just a small time living there. However, we quickly realized just how much we don’t belong in a city. We decided to move back to the loving woods of New Hampshire's seaport where the ideals of life make a lot more sense. Now we know! 
+		</p>
+
+	</div>
+	<div class="row">
+		<div class="col-sm-6 text-center">
+			<img style="width: 100%;" class="img img-fluid" src="{% static "home/img/roofdeck.jpg" %}">
+		</div>
+		<div class="col-sm-6 text-center">
+			<img style="width: 100%;" class="img img-fluid" height="100%"  src="{% static "home/img/apartment.jpg" %}">
+		</div>
+	</div>
+	<div  class="row">
+		<div style="background-color: white" class="col-sm-6"></div>
+		
+
+		
+	</div>
+</section>
+<div class="graduation"></div>
 
 
 {% endblock %}

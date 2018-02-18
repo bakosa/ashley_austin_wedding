@@ -16,7 +16,7 @@ urlpatterns = [
     url(r'^aawedding/admin/', include(admin.site.urls)),
     url(r'^aawedding/home/$', home_view, name='home'),
     url(r'^aawedding/venue/$', login_required(venue_view), name='venue'),
-    url(r'^aawedding/about/$', login_required(about_view), name='about'),
+    url(r'^aawedding/about/$', about_view, name='about'),
 
     url(r'^login/$', auth_views.login, name='login'),
     url(r'^logout/$', auth_views.logout, name='logout'),
