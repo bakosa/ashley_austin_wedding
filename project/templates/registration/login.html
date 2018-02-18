@@ -2,13 +2,7 @@
 {% load crispy_forms_tags %}
 {% load static %}
 {% block content %}
-<style type="text/css">
-	.bot {
-   position:absolute;
-   bottom:0;
-   padding-bottom: 50px;
-}
-</style>
+
 <div class="container">
 	<br>
 	<h1 class="display-3 text-center">Login With Facebook</h1>
@@ -24,12 +18,10 @@
 		</div>
 		<div class="col"></div>
 	</div>
-	<div class="row bot">
-		<div class="col"></div>
-		<div class="col-lg-8">
-			<p class="lead">I developed our wedding site with the Python Framework <a href="https://www.djangoproject.com">Django</a>. I am hosting it via <a href="https://www.openshift.com">Redhat OpenShift</a> which is PaaS and uses <a href="https://www.docker.com">Docker</a> & <a href="https://kubernetes.io">kubernetes</a>. -Austin</p>
-		</div>
-		<div class="col"></div>
+	<br>
+	<div style="padding-top: 90px" class="text-center">
+		<p class="lead">Not sure if you want to log into my website with Facebook Login? <a href="https://developers.facebook.com/docs/facebook-login">Read the docs</a> about how FB login works. I don’t get your password. I don’t get access to post things on your wall. What I do get is some way to verify that you are who you say you are. Over 10 million people login to apps via Facebook Login every day. <a href="https://docs.djangoproject.com/en/2.0/topics/security/">Read more about Django's security</a>.</p>
+		<a class="btn btn-outline-dark" href="mailto:austinbakos@yahoo.com">RSVP via Email</a>
 	</div>
 </div>
   {% endblock %}
