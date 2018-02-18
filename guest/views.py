@@ -29,3 +29,12 @@ class ProfileUpdateView(UpdateView):
 
 	def get_object(self, queryset=None):
 		return self.request.user.profile
+
+
+
+class Guests_View(generic.ListView):
+	model = User
+	context_object_name = 'users'
+	template_name = 'guest/guests.html'
+	def get_queryset(self):
+		return User.objects.all().order_by('last_name')

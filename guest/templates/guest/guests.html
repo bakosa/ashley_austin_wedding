@@ -1,0 +1,46 @@
+
+
+{% extends 'home/nav.html' %}
+
+
+{% block content %}
+<div class="container">
+	<h1 class="display-3">Guests</h1>
+	<hr>
+	<table class="table table-sm table-bordered">
+		<thead class="thead-light">
+			<tr>
+				<th></th>
+				<th>Name</th>
+				<th>RSVP Response</th>
+				<th>Date Joined</th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for user in users %}
+			<tr>
+				<td class="text-center">
+					{% if user.profile.profile_image %}
+						<a   href="{{ user.profile.profile_image.url }}"><img class="img rounded-circle" width="60" height="60"  alt="" src="{{ user.profile.profile_image.thumbnail.url }}"/></a>
+					{% else %}
+						<img class="img img-responsive" src="data:image/png;base64,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">
+					{% endif %}
+				</td>
+				<td><a href="{{ user.profile.get_absolute_url }}"> {{ user.first_name }} {{ user.last_name }}</a></td>
+				<td>
+					{% if user.response.0 %}
+						{{ user.response.0.attending }}
+					{% elif request.user == user %}
+						<a class="btn btn-outline-dark btn-sm" href="{% url 'rsvp:rsvp' %}">Please RSVP</a>
+					{% else %}
+						Unknown
+					{% endif %}
+				</td>
+				<td>Member for {{ user.date_joined|timesince }}</td>
+			</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+</div>
+{% endblock %}
+
