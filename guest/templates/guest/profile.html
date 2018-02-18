@@ -17,12 +17,15 @@
 
 				<h1 class="display-4">{{ user.first_name  }} {{ user.last_name }}</h1>
 				<hr>
-				<p class="lead">Member for {{ request.user.date_joined|timesince }}</p>
+				<p class="lead">Member for {{ user.date_joined|timesince }}</p>
+				{% if request.user == user %}
 				{% if not  request.user.response.first %}
 					<a class="btn btn-outline-dark btn-block" href="{% url 'rsvp:rsvp' %}">{{ request.user.first_name }} Please RSVP</a>
 				{% else %}
 					<p class="lead">Thank you for your RSVP on {{ request.user.response.first.response_date }}
 				{% endif %}
+				{% endif %}
+
 			</div>
 		</div>
 		<div class="col"></div>

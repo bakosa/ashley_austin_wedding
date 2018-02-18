@@ -29,7 +29,7 @@
 				<td><a href="{{ user.profile.get_absolute_url }}"> {{ user.first_name }} {{ user.last_name }}</a></td>
 				<td>
 					{% if user.response %}
-						{{ user.response.0.get__attending__display }}
+						{{ user.response.0.get_attending_display }}
 					{% elif request.user == user %}
 						<a class="btn btn-outline-dark btn-sm" href="{% url 'rsvp:rsvp' %}">Please RSVP</a>
 					{% else %}
