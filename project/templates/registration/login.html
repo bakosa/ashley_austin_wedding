@@ -6,12 +6,15 @@
 <div class="container">
 	<br>
 	<h1 class="display-3 text-center">Login With Facebook</h1>
+
 	<hr>
+	<div class="alert alert-info">FaceBook Changed some of their login settings. Should work now if you were having problems before -Austin</div>
 	<div class="row">
 		<div class="col"></div>
 		<div class="col-lg-4">
 			<div class="text-center">
 				<a class="btn btn-primary" href="{% url 'social:begin' 'facebook' %}"><span class="fa fa-facebook-official"></span> Login with Facebook</a>
+				<a class="btn btn-outline-dark" href="mailto:austinbakos@yahoo.com">RSVP via Email</a>
 				<br>
 			</div>
 			
@@ -20,8 +23,7 @@
 	</div>
 	<br>
 	<div style="padding-top: 90px" class="text-center">
-		<p class="lead">Not sure if you want to log into my website with Facebook Login? <a href="https://developers.facebook.com/docs/facebook-login">Read the docs</a> about how FB login works. I don’t get your password. I don’t get access to post things on your wall. What I do get is some way to verify that you are who you say you are. Over 10 million people login to apps via Facebook Login every day. <a href="https://docs.djangoproject.com/en/2.0/topics/security/">Read more about Django's security</a>.</p>
-		<a class="btn btn-outline-dark" href="mailto:austinbakos@yahoo.com">RSVP via Email</a>
+		
 	</div>
 </div>
   {% endblock %}
